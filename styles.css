@@ -1,19 +1,18 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(16, 123, 165);
-    font-weight: 700;
+a {
+  text-decoration: none;
+  color: rgb(16, 123, 165);
+  font-weight: 700;
 }
 
 body {
   background-color: aliceblue;
   font-family: "Poppins", sans-serif;
   margin: 0;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
-
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 main {
   padding: 0 16px 32px;
@@ -35,7 +34,7 @@ main {
   border-radius: 15px;
   padding: 24px 34px;
   box-shadow: 0 0 7px 1px rgb(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease-in-out; 
+  transition: background-color 0.3s ease-in-out;
 }
 
 .img-sun {
@@ -43,8 +42,8 @@ main {
   margin-left: 16px;
 }
 
-.img-check{
-    display: none;
+.img-check {
+  display: none;
 }
 
 .progress-label {
@@ -56,7 +55,7 @@ main {
   height: 30px;
   background-color: rgb(135, 173, 206);
   border-radius: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .progress-value {
@@ -69,31 +68,24 @@ main {
   color: #fbfbfb;
   display: flex;
   align-items: center;
-  /* padding-left: 20px; */
   transition: width 0.6s ease-in-out;
-
 }
 
 .progress-value span {
-    padding-left: 10px;
-    min-width: max-content;
-  }
-  
+  padding-left: 10px;
+  min-width: max-content;
+}
 
 .error-label {
   font-size: 12px;
   color: red;
-  /* margin-bottom: 34px; */
-  /* position: absolute; */
   margin-top: 4px;
   margin-left: 4px;
   display: none;
-
 }
 
-
 .show-error .error-label {
-    display: block;
+  display: block;
 }
 
 .goal-container {
@@ -130,143 +122,133 @@ input {
   font-weight: 500;
   border-radius: 12px;
   padding-left: 12px;
-
 }
 
 input::placeholder {
   color: gray;
 }
 
-.quote-bottom{
-    text-align: center;
-    font-weight: 500;
-    margin-top: 4rem;
-
+.quote-bottom {
+  text-align: center;
+  font-weight: 500;
 }
 
-.footer{
-    font-weight: 500;
-    font-size: 12px;
-    text-align: center;
-    color: #858585;
-    margin-top: 24px;
-
+.footer {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: #858585;
+  margin-top: 24px;
 }
 
-.completed .custom-checkbox{
-    background-color: #48a300;
-    border-color: #48a300;
-
+.completed .custom-checkbox {
+  background-color: #48a300;
+  border-color: #48a300;
 }
 
-.completed .img-check{
-    display: block;
+.completed .img-check {
+  display: block;
 }
 
-.completed input{
-    color: #48a300;
-    text-decoration-line: line-through;
-}
-/* 
-.error-label{
-    display: none;
-} */
-
-.set-fresh{
-    position: absolute;
-    left: 22rem;
-    bottom: -9rem;
-    border: none;
-    border-radius:5px ;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 8px;
-    background-color: #0984f0b2;
-    font-weight: 500;
+.completed input {
+  color: #48a300;
+  text-decoration-line: line-through;
 }
 
-.set-fresh:hover{
-    background-color: #1f82d8;
-    transition: background-color 0.3s ease-in-out;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#toggle-dark{
-    position: absolute;
-    top: 18px;
-    right: 24px;
-    background-color: #ebeff3;
-    /* color: white; */
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-
+.set-fresh {
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #0984f0b2;
+  font-weight: 600;
 }
 
+.set-fresh:hover {
+  background-color: #1f82d8;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#toggle-dark {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  background-color: #ebeff3;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
 .dark-mode {
-    background-color: #121212;
-    color: white;
-  }
-  
-  .dark-mode .app-container {
-    background-color: #2a2a2a;
-    box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.3);
-  }
-  
-  .dark-mode .title {
-    color: #4caf50;
-  }
-  
-  .dark-mode .title span {
-    color: #1f82d8;
-  }
-
-  .dark-mode .progress-label{
-    color: #dfdcdc;
-  }
-  
-  .dark-mode .progress-bar {
-    background-color: rgb(50, 50, 50);
-  }
-  
-  .dark-mode .progress-value {
-    background-color: #115086;
-  }
-  
-  .dark-mode .custom-checkbox {
-    border-color: #ffcc00;
-  }
-  
-  .dark-mode input {
-    background-color: #2d2d2d;
-    color: white;
-  }
-
-  .dark-mode .goal-container{
-    border: 1px solid #5d5d5d;
-  }
-  
-  .dark-mode input::placeholder {
-    color: #faf4f4;
-  }
-
-  .dark-mode .completed input{
-    color: #7aed1d;
-    text-decoration-line: line-through;
+  background-color: #121212;
+  color: white;
 }
-  .dark-mode .completed .custom-checkbox{
-    background-color: #2e570c;
-  }
-  .dark-mode .footer {
-    color: #faf8f8;
-  }
 
-  .dark-mode #toggle-dark{
-    background-color: #2a2a2a;
-  }
+.dark-mode .app-container {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.3);
+}
 
+.dark-mode .title {
+  color: #4caf50;
+}
+
+.dark-mode .title span {
+  color: #1f82d8;
+}
+
+.dark-mode .progress-label {
+  color: #dfdcdc;
+}
+
+.dark-mode .progress-bar {
+  background-color: rgb(50, 50, 50);
+}
+
+.dark-mode .progress-value {
+  background-color: #115086;
+}
+
+.dark-mode .custom-checkbox {
+  border-color: #ffcc00;
+}
+
+.dark-mode input {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.dark-mode .goal-container {
+  border: 1px solid #5d5d5d;
+}
+
+.dark-mode input::placeholder {
+  color: #faf4f4;
+}
+
+.dark-mode .completed input {
+  color: #7aed1d;
+  text-decoration-line: line-through;
+}
+.dark-mode .completed .custom-checkbox {
+  background-color: #2e570c;
+}
+.dark-mode .footer {
+  color: #faf8f8;
+}
+
+.dark-mode #toggle-dark {
+  background-color: #2a2a2a;
+}
 
 @media (max-width: 760px) {
   .title {
@@ -277,21 +259,21 @@ input::placeholder {
     padding: 18px 24px;
   }
 
-  .goal-container{
+  .goal-container {
     height: 64px;
     margin-bottom: 24px;
   }
 
-  .custom-checkbox{
+  .custom-checkbox {
     height: 18px;
     width: 18px;
   }
 
-  .footer{
+  .footer {
     margin-top: 18px;
   }
 
-  .progress-bar{
+  .progress-bar {
     height: 24px;
   }
 }
