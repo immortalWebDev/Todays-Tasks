@@ -100,3 +100,10 @@ toggleButton.addEventListener("click", () => {
     toggleButton.textContent = "🌙";
   }
 });
+
+const setFresh = document.querySelector(".set-fresh");
+
+setFresh.addEventListener("click", () => {
+  localStorage.clear();
+  window.location.reload();
+});
