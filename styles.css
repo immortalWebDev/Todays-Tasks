@@ -2,31 +2,40 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(16, 123, 165);
+    font-weight: 700;
+}
+
 body {
   background-color: aliceblue;
   font-family: "Poppins", sans-serif;
   margin: 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+
 }
 main {
   padding: 0 16px 32px;
 }
 
 .title {
-  font-size: 64px;
+  font-size: 58px;
   color: #48a300;
   text-align: center;
 }
 
 .title span {
-  color: #61481c;
+  color: #1f82d8;
 }
 .app-container {
   background-color: #fbfbfb;
   max-width: 660px;
   margin: 0 auto;
   border-radius: 15px;
-  padding: 32px 42px;
+  padding: 24px 34px;
   box-shadow: 0 0 7px 1px rgb(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out; 
 }
 
 .img-sun {
@@ -53,15 +62,23 @@ main {
 .progress-value {
   height: 100%;
   width: 66%;
-  background-color: rgb(31, 130, 216);
+  background-color: #1f82d8;
   border-radius: 15px;
   font-weight: 500;
   font-size: 10px;
   color: #fbfbfb;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  transition: width 0.6s ease-in-out;
+
 }
+
+.progress-value span {
+    padding-left: 10px;
+    min-width: max-content;
+  }
+  
 
 .error-label {
   font-size: 12px;
@@ -70,8 +87,13 @@ main {
   /* position: absolute; */
   margin-top: 4px;
   margin-left: 4px;
-  /* display: none; */
+  display: none;
 
+}
+
+
+.show-error .error-label {
+    display: block;
 }
 
 .goal-container {
@@ -106,6 +128,8 @@ input {
   width: 100%;
   /* align-self: stretch; */
   font-weight: 500;
+  border-radius: 12px;
+  padding-left: 12px;
 
 }
 
@@ -116,15 +140,16 @@ input::placeholder {
 .quote-bottom{
     text-align: center;
     font-weight: 500;
+    margin-top: 4rem;
 
 }
 
 .footer{
     font-weight: 500;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     color: #858585;
-    margin-top: 64px;
+    margin-top: 24px;
 
 }
 
@@ -147,13 +172,46 @@ input::placeholder {
     display: none;
 } */
 
+.set-fresh{
+    position: absolute;
+    left: 22rem;
+    bottom: -9rem;
+    border: none;
+    border-radius:5px ;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #0984f0b2;
+    font-weight: 500;
+}
+
+.set-fresh:hover{
+    background-color: #1f82d8;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#toggle-dark{
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    background-color: #ebeff3;
+    /* color: white; */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+
 @media (max-width: 760px) {
   .title {
     font-size: 32px;
   }
 
   .app-container {
-    padding: 30px 16px;
+    padding: 18px 24px;
   }
 
   .goal-container{
@@ -167,7 +225,7 @@ input::placeholder {
   }
 
   .footer{
-    margin-top: 32px;
+    margin-top: 18px;
   }
 
   .progress-bar{
